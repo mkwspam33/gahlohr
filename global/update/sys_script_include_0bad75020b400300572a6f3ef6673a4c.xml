@@ -54,28 +54,42 @@ PwdEnrollEmailProcessor.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-07-20 16:30:46</sys_created_on>
         <sys_id>0bad75020b400300572a6f3ef6673a4c</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>PwdEnrollEmailProcessor</sys_name>
         <sys_package display_value="GHalo HR" source="85a61e6777030010ca3ab5b268106169">85a61e6777030010ca3ab5b268106169</sys_package>
         <sys_policy/>
         <sys_scope display_value="GHalo HR">85a61e6777030010ca3ab5b268106169</sys_scope>
         <sys_update_name>sys_script_include_0bad75020b400300572a6f3ef6673a4c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-02-24 22:39:59</sys_updated_on>
+        <sys_updated_on>2020-02-24 23:03:06</sys_updated_on>
     </sys_script_include>
     <sys_claim action="INSERT_OR_UPDATE">
         <claim_owner_scope display_value="GHalo HR">85a61e6777030010ca3ab5b268106169</claim_owner_scope>
-        <claim_timestamp>170795b6d310000001</claim_timestamp>
+        <claim_timestamp>170797095830000001</claim_timestamp>
         <metadata_update_name>sys_script_include_0bad75020b400300572a6f3ef6673a4c</metadata_update_name>
         <previous_claim_app_version>1.0.0</previous_claim_app_version>
         <previous_claim_name>GHalo HR</previous_claim_name>
         <previous_claim_scope>85a61e6777030010ca3ab5b268106169</previous_claim_scope>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-02-24 22:39:59</sys_created_on>
-        <sys_id>94fe5aeb77030010ca3ab5b2681061e0</sys_id>
+        <sys_created_on>2020-02-24 23:03:06</sys_created_on>
+        <sys_id>7234eeaf77030010ca3ab5b2681061dc</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-02-24 22:39:59</sys_updated_on>
+        <sys_updated_on>2020-02-24 23:03:06</sys_updated_on>
+    </sys_claim>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="GHalo HR">85a61e6777030010ca3ab5b268106169</claim_owner_scope>
+        <claim_timestamp>170796c1d110000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_0bad75020b400300572a6f3ef6673a4c</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>GHalo ITSM</previous_claim_name>
+        <previous_claim_scope>bd441a2777030010ca3ab5b268106132</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-02-24 23:03:06</sys_created_on>
+        <sys_id>f634eeaf77030010ca3ab5b2681061dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-24 23:03:06</sys_updated_on>
     </sys_claim>
     <sys_claim action="INSERT_OR_UPDATE">
         <claim_owner_scope display_value="GHalo HR">85a61e6777030010ca3ab5b268106169</claim_owner_scope>
@@ -85,10 +99,10 @@ PwdEnrollEmailProcessor.prototype = {
         <previous_claim_name>com.glideapp.password_reset</previous_claim_name>
         <previous_claim_scope>com.glideapp.password_reset</previous_claim_scope>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-02-24 22:39:59</sys_created_on>
-        <sys_id>58fe5aeb77030010ca3ab5b2681061e0</sys_id>
+        <sys_created_on>2020-02-24 23:03:06</sys_created_on>
+        <sys_id>3634eeaf77030010ca3ab5b2681061dc</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-02-24 22:39:59</sys_updated_on>
+        <sys_updated_on>2020-02-24 23:03:06</sys_updated_on>
     </sys_claim>
 </record_update>

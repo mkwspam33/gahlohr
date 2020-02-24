@@ -72,28 +72,42 @@ PasswordPolicyUtil.prototype = Object.extendsObject(AbstractAjaxProcessor, {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-08-13 06:59:49</sys_created_on>
         <sys_id>eba9be64531333009e33ddeeff7b128c</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>PasswordPolicyUtil</sys_name>
         <sys_package display_value="GHalo HR" source="85a61e6777030010ca3ab5b268106169">85a61e6777030010ca3ab5b268106169</sys_package>
         <sys_policy/>
         <sys_scope display_value="GHalo HR">85a61e6777030010ca3ab5b268106169</sys_scope>
         <sys_update_name>sys_script_include_eba9be64531333009e33ddeeff7b128c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-02-24 22:40:18</sys_updated_on>
+        <sys_updated_on>2020-02-24 23:02:43</sys_updated_on>
     </sys_script_include>
     <sys_claim action="INSERT_OR_UPDATE">
         <claim_owner_scope display_value="GHalo HR">85a61e6777030010ca3ab5b268106169</claim_owner_scope>
-        <claim_timestamp>170795bb5050000001</claim_timestamp>
+        <claim_timestamp>17079703cc30000001</claim_timestamp>
         <metadata_update_name>sys_script_include_eba9be64531333009e33ddeeff7b128c</metadata_update_name>
         <previous_claim_app_version>1.0.0</previous_claim_app_version>
         <previous_claim_name>GHalo HR</previous_claim_name>
         <previous_claim_scope>85a61e6777030010ca3ab5b268106169</previous_claim_scope>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-02-24 22:40:18</sys_created_on>
-        <sys_id>b00fdaeb77030010ca3ab5b26810614a</sys_id>
+        <sys_created_on>2020-02-24 23:02:43</sys_created_on>
+        <sys_id>1d24aeaf77030010ca3ab5b268106193</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-02-24 22:40:18</sys_updated_on>
+        <sys_updated_on>2020-02-24 23:02:43</sys_updated_on>
+    </sys_claim>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="GHalo HR">85a61e6777030010ca3ab5b268106169</claim_owner_scope>
+        <claim_timestamp>170796bf5fc0000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_eba9be64531333009e33ddeeff7b128c</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>GHalo ITSM</previous_claim_name>
+        <previous_claim_scope>bd441a2777030010ca3ab5b268106132</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-02-24 23:02:43</sys_created_on>
+        <sys_id>9124aeaf77030010ca3ab5b268106194</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-24 23:02:43</sys_updated_on>
     </sys_claim>
     <sys_claim action="INSERT_OR_UPDATE">
         <claim_owner_scope display_value="GHalo HR">85a61e6777030010ca3ab5b268106169</claim_owner_scope>
@@ -103,10 +117,10 @@ PasswordPolicyUtil.prototype = Object.extendsObject(AbstractAjaxProcessor, {
         <previous_claim_name>com.glide.password_policy</previous_claim_name>
         <previous_claim_scope>com.glide.password_policy</previous_claim_scope>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-02-24 22:40:18</sys_created_on>
-        <sys_id>740fdaeb77030010ca3ab5b26810614a</sys_id>
+        <sys_created_on>2020-02-24 23:02:43</sys_created_on>
+        <sys_id>dd24aeaf77030010ca3ab5b268106193</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-02-24 22:40:18</sys_updated_on>
+        <sys_updated_on>2020-02-24 23:02:43</sys_updated_on>
     </sys_claim>
 </record_update>
