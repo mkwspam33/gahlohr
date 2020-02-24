@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.PwdAjaxChangePassword</api_name>
+        <caller_access/>
+        <claim/>
+        <client_callable>true</client_callable>
+        <description>Ajax request processor for Password Change</description>
+        <name>PwdAjaxChangePassword</name>
+        <script><![CDATA[var PwdAjaxChangePassword = Class.create();
+
+PwdAjaxChangePassword.prototype = Object.extendsObject(PwdAjaxRequestProcessor, {
+	
+	changePasswordBL : new PWDChangePasswordBL(),
+	
+	isPublic: function() {
+		return false;
+	},
+	
+	getProcessesForUser: function() {
+		var userId = this.getParameter('sysparm_user');		
+		var processes = this.changePasswordBL.getProcessesForUser(userId);
+		
+		processes.forEach(function(process) {
+			var processItem = this.newItem('process');
+			
+			for (var attr in process)
+				processItem.setAttribute(attr, process[attr]);
+			
+		}, this);
+	},
+	
+	validatePassword: function() {
+		var processId = this.getParameter('sysparam_process_id');
+		var newPwd = this.getParameter("sysparam_new_password");
+
+		return this.changePasswordBL.validatePassword(processId, newPwd);
+	},
+	
+	// receiver of the change password request from ui.
+	// creates a pwd reset request and kicks off the wf
+	changePassword: function() {
+		var userId = this.getParameter('sysparm_user');
+		var procId = this.getParameter('sysparm_procId');		
+		var newPasswd = this.getParameter("sysparam_new_password");
+		var oldPasswd = this.getParameter("sysparam_old_password");
+		
+		var result = this.changePasswordBL.changePassword(userId, procId, newPasswd, oldPasswd);
+	
+		gs.getSession().putProperty('sysparm_request_id', result.requestId);
+		gs.getSession().putProperty('sysparm_sys_user_id', userId);
+		gs.getSession().putProperty('sysparm_directory', this.type);
+		
+		if (result.status == this.changePasswordBL.STATUS_BLOCKED) {
+			this._setResponseMessage("block", gs.getMessage('User is blocked'), '');					
+		}
+		else if (result.status == this.changePasswordBL.STATUS_FAILURE) {
+			var errorMsg = result.errorMessage;
+			this._setResponseMessage("failure", errorMsg, '');
+		}
+		else {
+			this._setResponseMessage("success", gs.getMessage("Password change was successful"), result.ctxId);
+		}	
+	},
+	
+	// ui to poll for the wf status
+	checkChangePwdWFState: function() {
+		var ctxId = this.getParameter('sysparam_wf_context_sys_id');
+		var ctx = PWDWorkflowHelper.getWorkflowData(ctxId, false);
+		
+		this._setResponseMessage(ctx.state, gs.getMessage("Current status of workflow") , ctx.result);
+	},
+		
+	type: 'PwdAjaxChangePassword'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2014-03-19 21:15:48</sys_created_on>
+        <sys_id>93a41db5eb6311006a668c505206fe0d</sys_id>
+        <sys_mod_count>128</sys_mod_count>
+        <sys_name>PwdAjaxChangePassword</sys_name>
+        <sys_package display_value="GHalo HR" source="85a61e6777030010ca3ab5b268106169">85a61e6777030010ca3ab5b268106169</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GHalo HR">85a61e6777030010ca3ab5b268106169</sys_scope>
+        <sys_update_name>sys_script_include_93a41db5eb6311006a668c505206fe0d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-24 22:15:15</sys_updated_on>
+    </sys_script_include>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="GHalo HR">85a61e6777030010ca3ab5b268106169</claim_owner_scope>
+        <claim_timestamp>1707944c53f0000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_93a41db5eb6311006a668c505206fe0d</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>GHalo HR</previous_claim_name>
+        <previous_claim_scope>85a61e6777030010ca3ab5b268106169</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-02-24 22:15:15</sys_created_on>
+        <sys_id>71499ae777030010ca3ab5b2681061f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-24 22:15:15</sys_updated_on>
+    </sys_claim>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="GHalo HR">85a61e6777030010ca3ab5b268106169</claim_owner_scope>
+        <claim_timestamp>1707944c5330000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_93a41db5eb6311006a668c505206fe0d</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>com.glideapp.password_reset</previous_claim_name>
+        <previous_claim_scope>com.glideapp.password_reset</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-02-24 22:15:15</sys_created_on>
+        <sys_id>35499ae777030010ca3ab5b2681061f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-24 22:15:15</sys_updated_on>
+    </sys_claim>
+</record_update>
