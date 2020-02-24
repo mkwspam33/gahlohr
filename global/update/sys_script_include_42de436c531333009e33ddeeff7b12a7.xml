@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.PasswordPolicyDefaults</api_name>
+        <caller_access/>
+        <claim/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>PasswordPolicyDefaults</name>
+        <script><![CDATA[var PasswordPolicyDefaults = {
+    default_defaults: {
+        'minimum_uppercase_characters': '1',
+        'minimum_lowercase_characters': '1',
+        'minimum_numeric_characters': '1',
+        'minimum_special_characters': '0'
+    },
+    medium_defaults: {
+        'minimum_uppercase_characters': '1',
+        'minimum_lowercase_characters': '1',
+        'minimum_numeric_characters': '1',
+        'minimum_special_characters': '1'
+    },
+    high_defaults: {
+        'minimum_uppercase_characters': '1',
+        'minimum_lowercase_characters': '2',
+        'minimum_numeric_characters': '1',
+        'minimum_special_characters': '3'
+    }
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-13 08:32:16</sys_created_on>
+        <sys_id>42de436c531333009e33ddeeff7b12a7</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>PasswordPolicyDefaults</sys_name>
+        <sys_package display_value="GHalo HR" source="85a61e6777030010ca3ab5b268106169">85a61e6777030010ca3ab5b268106169</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GHalo HR">85a61e6777030010ca3ab5b268106169</sys_scope>
+        <sys_update_name>sys_script_include_42de436c531333009e33ddeeff7b12a7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-24 22:40:06</sys_updated_on>
+    </sys_script_include>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="GHalo HR">85a61e6777030010ca3ab5b268106169</claim_owner_scope>
+        <claim_timestamp>170795b85bb0000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_42de436c531333009e33ddeeff7b12a7</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>GHalo HR</previous_claim_name>
+        <previous_claim_scope>85a61e6777030010ca3ab5b268106169</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-02-24 22:40:06</sys_created_on>
+        <sys_id>35fedaeb77030010ca3ab5b26810617d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-24 22:40:06</sys_updated_on>
+    </sys_claim>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="GHalo HR">85a61e6777030010ca3ab5b268106169</claim_owner_scope>
+        <claim_timestamp>170795b85b20000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_42de436c531333009e33ddeeff7b12a7</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>com.glide.password_policy</previous_claim_name>
+        <previous_claim_scope>com.glide.password_policy</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-02-24 22:40:06</sys_created_on>
+        <sys_id>f5fedaeb77030010ca3ab5b26810617d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-24 22:40:06</sys_updated_on>
+    </sys_claim>
+</record_update>
